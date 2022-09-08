@@ -9,11 +9,9 @@ class Solution:
             return head
         
         cur = head
-        while cur.next != None:
-            if (cur.val == cur.next.val) & (cur.next.next != None):
+        while cur.next:
+            if cur.val == cur.next.val:
                 cur.next = cur.next.next
-            elif (cur.val == cur.next.val) & (cur.next.next == None):
-                cur.next = None
             else:
                 cur = cur.next
                 

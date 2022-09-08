@@ -8,12 +8,14 @@ class Solution:
         if head == None:
             return head
         
-        if head.next != None:
-            if (head.val == head.next.val) & (head.next.next != None):
-                head.next = head.next.next
-                self.deleteDuplicates(head)
-            elif (head.val == head.next.val) & (head.next.next == None):
-                head.next = None
+        cur = head
+        while cur.next != None:
+            if (cur.val == cur.next.val) & (cur.next.next != None):
+                cur.next = cur.next.next
+            elif (cur.val == cur.next.val) & (cur.next.next == None):
+                cur.next = None
             else:
-                self.deleteDuplicates(head.next)
+                cur = cur.next
+                
         return head
+                

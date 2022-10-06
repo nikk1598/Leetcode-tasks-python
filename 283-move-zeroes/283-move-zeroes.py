@@ -5,9 +5,10 @@ class Solution:
         """
         if (len(nums) == 1) or (len(nums) == 0):
             return
-        
+
         first_pointer = 0
         second_pointer = 1
+        
         while(second_pointer < len(nums)-1):
             if nums[first_pointer] == 0:
                 while (nums[second_pointer] == 0) and (second_pointer < len(nums)-1):

@@ -6,10 +6,6 @@ class Solution:
         if (len(nums) == 1) or (len(nums) == 0):
             return
         
-        if (len(nums) == 2) and (nums[0] == 0):
-            nums[0], nums[1] = nums[1], nums[0]
-            return
-        
         first_pointer = 0
         second_pointer = 1
         while(second_pointer < len(nums)-1):

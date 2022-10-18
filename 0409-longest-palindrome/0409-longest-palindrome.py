@@ -17,7 +17,6 @@ class Solution:
                 left_right_count += dic[x]-1
                 middle_count += 1
 
-        
         if middle_count == 0:
             return left_right_count
         else:

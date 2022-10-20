@@ -10,7 +10,7 @@ class Solution:
             return []
         
         if (root.left != None) & (root.right != None):
-            return self.inorderTraversal(root.left) + [root.val]+ self.inorderTraversal(root.right)
+            return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
         elif (root.left != None):
             return self.inorderTraversal(root.left) + [root.val] 
         elif (root.right != None):

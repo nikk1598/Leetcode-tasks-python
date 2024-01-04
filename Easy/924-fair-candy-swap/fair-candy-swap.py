@@ -1,8 +1,10 @@
 class Solution:
     def fairCandySwap(self, aliceSizes: List[int], bobSizes: List[int]) -> List[int]:
+        aliceSizesSet = set(aliceSizes)
+        
         for num in bobSizes:
             x = (sum(aliceSizes) - sum(bobSizes) + 2*num) // 2
-            if x in set(aliceSizes):
+            if x in aliceSizesSet:
                 return [x, num]
 
     ## bobSum - num + x = aliceSum - x + num
